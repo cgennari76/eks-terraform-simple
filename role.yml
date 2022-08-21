@@ -1,0 +1,19 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  labels:
+    app.kubernetes.io/name: aws-load-balancer-controller
+  name: aws-load-balancer-controller-leader-election-role
+  namespace: kube-system
+rules:
+  - apiGroups:
+      - ""
+    # resourceNames:
+    #   - aws-load-balancer-controller-leader
+    resources:
+      - configmaps
+    verbs:
+      - create
+      - get
+      - update
+      - patch
