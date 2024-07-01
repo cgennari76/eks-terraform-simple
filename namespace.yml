@@ -1,12 +1,5 @@
----
-- name: Create another kube namespace
-  hosts: localhost
-  connection: false
-  gather_facts: False
-  tasks:
-    - name: Create a namespace
-      k8s:
-        name: game-2048
-        api_version: v1
-        kind: Namespace
-        state: present
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: game-2048
+
