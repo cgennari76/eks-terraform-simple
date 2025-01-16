@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: "2048"
-          image: alexwhen/docker-2048
+          image: public.ecr.aws/l6m2t8p7/docker-2048
           ports:
             - containerPort: 80
               protocol: TCP
